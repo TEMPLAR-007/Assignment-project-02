@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    
 }
 
 body{
@@ -18,22 +18,24 @@ body{
     padding: 0 30px;
 }
 
-.button{
-    background-image: linear-gradient(90deg, black, rgb(128, 128, 128));
-    color: whitesmoke;
+.button {
+    padding: 7px 35px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #4b8cfb;
+    color: white;
     font-size: 18px;
-    padding: 10px 20px;
-    border: 0;
-    border-radius: 20px;
-    box-shadow: 0 7px 0 black;
-    position: relative;
-    top: 0;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.07);
+    transition: all 300ms ease;
 }
 
-.button:active{
-    top: 5px;
-    box-shadow: 0 2px 0 black;
+
+.button:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.09);
 }
+
 
 .section-title{
     text-align: center;
@@ -67,7 +69,90 @@ nav{
 
 .banner{
     display: grid;
+    min-height: 500px;
     grid-template-columns:1fr 1fr;
+}
+
+.motion-word{
+   font-size: 50px;
+   white-space: nowrap;
+   position: relative;
+}
+
+.motion-word::before {
+    content: 'Influencer';
+    position: absolute;
+    color: orangered;
+    animation: typing 3s linear infinite ;
+}
+
+ @keyframes typing {
+     0%{
+         content: 'I|';
+     }
+     6%{
+         content: 'In|';
+     }
+     12%{
+         content: 'Inf|';
+     }
+     18%{
+         content: 'Infl|';
+     }
+     24%{
+         content: 'Influ|';
+     }
+     30%{
+         content: 'Influe|';
+     }
+     36%{
+         content: 'Influen|';
+     }
+     42%{
+         content: 'Influenc|';
+     }
+     48%{
+         content: 'Influence|';
+     }
+     54%{
+         content: 'Influencer|';
+     }
+
+     60%,
+     90%{
+         content: 'Influencer|';
+     }
+     91%{
+         content: 'Influence|';
+     }
+     92%{
+         content: 'Influenc|';
+     }
+     93%{
+         content: 'Influen|';
+     }
+     94%{
+         content: 'Influe|';
+     }
+     95%{
+         content: 'Influ|';
+     }
+     96%{
+         content: 'Infl|';
+     }
+     97%{
+         content: 'Inf|';
+     }
+     98%{
+         content: 'In|';
+     }
+     99%{
+         content: 'I|';
+     }
+     100%{
+         content: '|';
+     }
+     
 }
 
 .banner-left{
@@ -83,7 +168,7 @@ nav{
 
 .banner-left p{
     font-weight: 500;
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .banner-right{
@@ -92,22 +177,13 @@ nav{
     align-items: flex-end;
 }
 
-.banner-right img{
-    
-    
-}
-
-
 .logos{
     display: grid;
-    grid-template-columns: repeat(7,1fr);
-    width: 50%;
-    margin-left: 25%;
+    grid-template-columns: repeat(7, 1fr);
+    width:50%;
+    margin-left: 400px;
     margin-top: 100px;
-    margin-bottom: 200px; ;
-    padding-top: 50px;
-    
-    
+    margin-bottom: 100px;
 }
 
 /*-------------------------- popular collection part-----------------  */
@@ -161,6 +237,229 @@ nav{
 
 .see-more{
     color: orangered;
-    padding-left: 1660px;
+    margin-left: 85%;
     margin-top: 50px;
 }
+
+/*------------------------ contact form style ---------------- */
+
+.box-name {
+    font-family: 'Poppins', sans-serif, 'arial';
+    font-weight: 600;
+    font-size: 72px;
+    color: #4b8cfb;
+    text-align: center;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #9b9b9b;
+    text-align: center;
+}
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -10px;
+    transition: all 0.225s ease;
+}
+
+.input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+    .input {
+        width:100%;
+    }
+}
+
+.input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.input.wide { 
+    width: 650px;
+    max-width: 100%;
+}
+
+input, textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-box {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+/* -------------footer style------------------ */
+
+footer{
+    height: 200px;
+    padding-top: 50px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    background-color: #0A0826;;
+}
+
+.footer-icon a{
+    color: white;
+    font-size: 20px;
+    letter-spacing: 20px;
+}
+
+
+/* --------------------responsive css---------------------- */
+
+/* mobile devices */
+
+@media only screen and (max-width:688px) {
+
+
+    .header-text{
+        text-align: center;
+    }
+
+
+    nav{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .banner{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .banner-left{
+        display: flex;
+        align-items: center;
+    }
+    
+    .banner-left h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .banner-left p{
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .logos{
+        display:none;
+        position: absolute;
+
+        
+    }
+    
+    .Popular-Collections{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+    }
+
+
+    .input-box {
+        width: 300px;
+        max-width: 100%;
+        margin: 10px 10px;
+        
+    }
+
+    .input.wide { 
+        width: 300px;
+        max-width: 100%;
+    }
+       
+}
+
+/* tablet devices */
+@media only screen and (min-width:688px) and (max-width:992px) {
+
+    .header-text{
+        text-align: center;
+    }
+
+
+    nav{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .banner{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .banner-left{
+        display: flex;
+        align-items: center;
+    }
+    
+    .banner-left h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .banner-left p{
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .logos{
+        display:none;
+        position: absolute;
+
+        
+    }
+    
+    .Popular-Collections{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+    }
+
+
+    .input-box {
+        width: 600px;
+        max-width: 100%;
+        margin: 10px 10px;
+        
+    }
+
+    .input.wide { 
+        width: 600px;
+        max-width: 100%;
+    }
+       
+    
+}
+    
